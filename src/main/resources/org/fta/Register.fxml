@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="240.0" prefWidth="283.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.fta.RegisterController">
+<GridPane alignment="center" prefHeight="208.0" prefWidth="275.0" styleClass="root" stylesheets="@../../Style/Register.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.fta.RegisterController">
     <padding>
         <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
     </padding>
@@ -16,14 +16,22 @@
          </font></Text>
        <Label text="Username:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
 
-       <TextField fx:id="usernameField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+       <TextField fx:id="usernameField" promptText="Username" GridPane.columnIndex="1" GridPane.rowIndex="1" />
 
        <Label text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
 
-       <PasswordField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-      <Label text="Role:" GridPane.rowIndex="9" />
-      <ChoiceBox prefWidth="150.0" styleClass="role" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+       <PasswordField fx:id="passwordField" promptText="Password" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+       <Label text="Role:" GridPane.rowIndex="5" />
+       <Text fx:id="registrationMessage" GridPane.columnIndex="1" GridPane.rowIndex="7" />
 
+       <HBox alignment="TOP_RIGHT" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="8">
+           <children>
+              <Button text="Sign Up" />
+               <Button mnemonicParsing="false" text="Login Page" />
+           </children>
+       </HBox>
+
+      <ChoiceBox fx:id="Role" prefHeight="25.0" prefWidth="170.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
    </children>
     <columnConstraints>
         <ColumnConstraints />
