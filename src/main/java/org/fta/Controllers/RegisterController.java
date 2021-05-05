@@ -13,6 +13,7 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import org.fta.App;
 import org.fta.Exceptions.UsernameAlreadyExistsException;
+import org.fta.Services.ClientService;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -44,6 +45,11 @@ public class RegisterController implements Initializable {
 
     @FXML
     public void handleSignUpAction(){
-
+        try {
+            ClientService.addUser(usernameField.getText(), passwordField.getText(), (String) Role.getValue());
+            registrationMessage.setText("Account created successfully!");
+        } catch (UsernameAlreadyExistsException e) {
+            registrationMessage.setText(e.getMessage());
+        }
     }
 }
