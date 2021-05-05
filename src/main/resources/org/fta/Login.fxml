@@ -28,8 +28,8 @@
     <ChoiceBox fx:id="Role" prefWidth="150.0" styleClass="role" GridPane.columnIndex="1" GridPane.rowIndex="3">
     </ChoiceBox>
     <HBox alignment="bottom_right" spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="5">
-        <Button prefHeight="26.0" prefWidth="65.0" stylesheets="@../../Style/Login.css" text="Login" />
-       <Button mnemonicParsing="false" onAction="#handleLoginPageAction" prefHeight="26.0" prefWidth="131.0" stylesheets="@../../Style/Login.css" text="New? Register here" />
+        <Button onAction="#handleLoginPageAction" prefHeight="26.0" prefWidth="65.0" stylesheets="@../../Style/Login.css" text="Login" />
+       <Button mnemonicParsing="false" onAction="#handleRegisterRedirectAction" prefHeight="26.0" prefWidth="131.0" stylesheets="@../../Style/Login.css" text="New? Register here" />
     </HBox>
     <HBox prefHeight="26.0" prefWidth="167.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
     <columnConstraints>
