@@ -1,4 +1,4 @@
-package org.fta;
+package org.fta.Controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

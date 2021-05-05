@@ -5,20 +5,20 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<GridPane alignment="center" prefHeight="208.0" prefWidth="275.0" styleClass="root" stylesheets="@../../Style/Register.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.fta.RegisterController">
+<GridPane alignment="center" prefHeight="250.0" prefWidth="350.0" styleClass="root" stylesheets="@../../Style/Register.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.fta.Controllers.RegisterController">
     <padding>
         <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
     </padding>
    <children>
-      <Text id="title-text" text="FIS - Fitness Training" wrappingWidth="156.52099609375" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="0">
+      <Text id="title-text" text="FIS - Fitness Training App" wrappingWidth="221.52099609375" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="0">
          <font>
             <Font name="System Bold" size="15.0" />
          </font></Text>
-       <Label text="Username:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+       <Label stylesheets="@../../Style/Register.css" text="Username:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
 
        <TextField fx:id="usernameField" promptText="Username" GridPane.columnIndex="1" GridPane.rowIndex="1" />
 
-       <Label text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+       <Label stylesheets="@../../Style/Register.css" text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
 
        <PasswordField fx:id="passwordField" promptText="Password" GridPane.columnIndex="1" GridPane.rowIndex="2" />
        <Label text="Role:" GridPane.rowIndex="5" />
@@ -26,12 +26,12 @@
 
        <HBox alignment="TOP_RIGHT" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="8">
            <children>
-              <Button text="Sign Up" />
-               <Button mnemonicParsing="false" text="Login Page" />
+               <Button mnemonicParsing="false" onAction="#handleLoginPageAction" prefHeight="25.0" prefWidth="75.0" stylesheets="@../../Style/Register.css" text="Login Page" />
+              <Button onAction="#handleSignUpAction" stylesheets="@../../Style/Register.css" text="Sign Up" />
            </children>
        </HBox>
 
-      <ChoiceBox fx:id="Role" prefHeight="25.0" prefWidth="170.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+      <ChoiceBox fx:id="Role" prefHeight="25.0" prefWidth="201.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
    </children>
     <columnConstraints>
         <ColumnConstraints />
