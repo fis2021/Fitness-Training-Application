@@ -4,6 +4,7 @@ import org.dizitart.no2.Nitrite;
 import org.dizitart.no2.objects.ObjectRepository;
 import org.fta.Exceptions.UsernameAlreadyExistsException;
 import org.fta.Models.ClientModel;
+import org.fta.Exceptions.InvalidCredentialsException;
 import static org.fta.Services.FileSystemService.getPathToFile;
 
 import java.nio.charset.StandardCharsets;
@@ -15,7 +16,7 @@ public class ClientService {
 
     private static ObjectRepository<ClientModel> clientRepository;
 
-    public static void initDatabase(){
+    public static void initDatabase() {
         Nitrite database = Nitrite.builder()
                 .filePath(getPathToFile("fis-fta.db").toFile())
                 .openOrCreate("test", "test");
@@ -56,4 +57,21 @@ public class ClientService {
         clientRepository.insert(new ClientModel(username, encodePassword(username, password), role));
     }
 
+    public static void VerifyLogin(String username, String password) throws InvalidCredentialsException {
+        CheckUserCredentialsInLogin(username, password);
+    }
+
+    private static void CheckUserCredentialsInLogin(String username, String password) throws InvalidCredentialsException {
+        int k = 0; //contor
+        for (ClientModel client : clientRepository.find()) {
+            if (Objects.equals(username, client.getUsername())) {
+                if (Objects.equals(client.getPassword(), encodePassword(username, password))) {
+                    k++;
+                }
+            }
+        }
+        if (k == 0) {
+            throw new InvalidCredentialsException();
+        }
+    }
 }
