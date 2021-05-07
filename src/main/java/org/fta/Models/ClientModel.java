@@ -4,12 +4,18 @@ import org.dizitart.no2.objects.Id;
 public class ClientModel {
 
     @Id
-    private String Role, password, username;
+    private String username;
+    private String password;
+    private String Role;
 
-    public ClientModel(String Role, String password, String username){
+    public ClientModel(String username, String password, String Role){
         this.Role = Role;
         this.password = password;
         this.username = username;
+    }
+
+    public ClientModel(){
+
     }
 
     public String getRole() {

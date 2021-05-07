@@ -47,9 +47,9 @@ public class ClientService {
 
         byte[] hashedPassword = md.digest(password.getBytes(StandardCharsets.UTF_8));
 
-
+        // This is the way a password should be encoded when checking the credentials
         return new String(hashedPassword, StandardCharsets.UTF_8)
-                .replace("\"", "");
+                .replace("\"", ""); //to be able to save in JSON format
     }
 
     public static void addUser(String username, String password, String role) throws UsernameAlreadyExistsException {
