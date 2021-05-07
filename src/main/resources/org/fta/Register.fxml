@@ -5,11 +5,11 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
+
 <GridPane alignment="center" prefHeight="250.0" prefWidth="350.0" styleClass="root" stylesheets="@../../Style/Register.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.fta.Controllers.RegisterController">
     <padding>
         <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
     </padding>
-   <children>
       <Text id="title-text" text="FIS - Fitness Training App" wrappingWidth="221.52099609375" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="0">
          <font>
             <Font name="System Bold" size="15.0" />
@@ -30,9 +30,8 @@
               <Button onAction="#handleSignUpAction" stylesheets="@../../Style/Register.css" text="Sign Up" />
            </children>
        </HBox>
-
       <ChoiceBox fx:id="Role" prefHeight="25.0" prefWidth="201.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-   </children>
+
     <columnConstraints>
         <ColumnConstraints />
         <ColumnConstraints />
