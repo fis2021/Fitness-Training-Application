@@ -17,6 +17,7 @@ public class ClientService {
     private static ObjectRepository<ClientModel> clientRepository;
 
     public static void initDatabase() {
+
         Nitrite database = Nitrite.builder()
                 .filePath(getPathToFile("fis-fta.db").toFile())
                 .openOrCreate("test", "test");
@@ -25,6 +26,7 @@ public class ClientService {
     }
 
     private static void checkUserDoesNotAlreadyExist(String username) throws UsernameAlreadyExistsException {
+
         for (ClientModel client : clientRepository.find()) {
             if (Objects.equals(username, client.getUsername()))
                 throw new UsernameAlreadyExistsException(username);
