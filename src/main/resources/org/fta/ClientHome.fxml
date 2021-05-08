@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="252.0" prefWidth="513.0" styleClass="root" stylesheets="@../../Style/ClientHome.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.fta.Controllers.ClientHomeController">
+   <children>
+      <Button fx:id="listbutton" layoutX="262.0" layoutY="123.0" mnemonicParsing="false" onAction="#handleListofTrainersRedirect" prefHeight="51.0" prefWidth="230.0" stylesheets="@../../Style/ClientHome.css" text="List of Trainers" />
+      <Button fx:id="pastbutton" layoutX="26.0" layoutY="123.0" mnemonicParsing="false" onAction="#handlePastApplications" prefHeight="51.0" prefWidth="230.0" stylesheets="@../../Style/ClientHome.css" text="Past Zoom Applications" />
+      <Label layoutX="156.0" layoutY="25.0" prefHeight="79.0" prefWidth="221.0" stylesheets="@../../Style/ClientHome.css" text="              Welcome back Client!" textAlignment="CENTER" textFill="#cf2225" />
+      <Button fx:id="logoutbutton" layoutX="333.0" layoutY="195.0" mnemonicParsing="false" onAction="#handleLogoutAction" prefHeight="25.0" prefWidth="115.0" text="Log out" GridPane.rowIndex="11" />
+   </children>
+</AnchorPane>
