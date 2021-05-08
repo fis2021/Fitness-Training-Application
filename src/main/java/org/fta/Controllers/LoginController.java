@@ -23,27 +23,18 @@ import java.util.ResourceBundle;
 public class LoginController implements Initializable {
 
     @FXML
-    private Text loginMessage;
-    @FXML
-    private PasswordField passwordField;
-    @FXML
-    private TextField usernameField;
-    @FXML
-    private ChoiceBox Role;
+         private Text loginMessage;
+         @FXML
+         private PasswordField passwordField;
+         @FXML
+         private TextField usernameField;
+         @FXML
+         private ChoiceBox Role;
 
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         Role.getItems().addAll("Client", "Trainer");
-    }
-
-    @FXML
-    public void handleRegisterRedirectAction(ActionEvent event) throws Exception{
-        Stage primary=(Stage)loginMessage.getScene().getWindow();
-        Parent root = FXMLLoader.load(App.class.getResource("Register.fxml"));
-        primary.setTitle("Register");
-        primary.setScene(new Scene(root, 370, 300));
-        primary.show();
     }
 
     @FXML
@@ -54,14 +45,14 @@ public class LoginController implements Initializable {
             String Rol=(String)Role.getValue();
             if(Rol.equals("Client"))
             {
-                Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("ClientHome.fxml"));
+                Parent root = FXMLLoader.load(App.class.getResource("ClientHome.fxml"));
                 primary.setTitle("Client Home");
-                primary.setScene(new Scene(root, 950, 500));
+                primary.setScene(new Scene(root, 850, 500));
                 primary.show();
             }
             if(Rol.equals("Trainer"))
             {
-                Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("TrainerHome.fxml"));
+                Parent root = FXMLLoader.load(App.class.getResource("TrainerHome.fxml"));
                 primary.setTitle("Trainer Home");
                 primary.setScene(new Scene(root, 800, 500));
                 primary.show();
@@ -69,6 +60,15 @@ public class LoginController implements Initializable {
         }catch(InvalidCredentialsException e) {
             loginMessage.setText(e.getMessage());
         }
+    }
+
+    @FXML
+    public void handleRegisterRedirectAction(ActionEvent event) throws Exception{
+        Stage primary=(Stage)loginMessage.getScene().getWindow();
+        Parent root = FXMLLoader.load(App.class.getResource("Register.fxml"));
+        primary.setTitle("Register");
+        primary.setScene(new Scene(root, 370, 300));
+        primary.show();
     }
 
 }
