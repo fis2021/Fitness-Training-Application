@@ -6,12 +6,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import org.fta.App;
 
-public class ClientHomeController {
-
+public class ListofTrainersController {
     @FXML
     private Button logoutbutton;
 
@@ -24,19 +22,7 @@ public class ClientHomeController {
     }
 
     @FXML
-    private Button listbutton;
-
-    @FXML
     private Button pastbutton;
-
-    @FXML
-    public void handleListofTrainersRedirect(ActionEvent event) throws Exception{
-        Stage primary=(Stage)listbutton.getScene().getWindow();
-        Parent root = FXMLLoader.load(App.class.getResource("ListofTrainers.fxml"));
-        primary.setTitle("List of Trainers");
-        primary.setScene(new Scene(root, 370, 300));
-        primary.show();
-    }
 
     @FXML
     public void handlePastApplications(ActionEvent event) throws Exception{
@@ -47,5 +33,3 @@ public class ClientHomeController {
         primary.show();
     }
 }
-
-

@@ -6,12 +6,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import org.fta.App;
 
-public class ClientHomeController {
-
+public class PastApplicationsController {
     @FXML
     private Button logoutbutton;
 
@@ -27,9 +25,6 @@ public class ClientHomeController {
     private Button listbutton;
 
     @FXML
-    private Button pastbutton;
-
-    @FXML
     public void handleListofTrainersRedirect(ActionEvent event) throws Exception{
         Stage primary=(Stage)listbutton.getScene().getWindow();
         Parent root = FXMLLoader.load(App.class.getResource("ListofTrainers.fxml"));
@@ -37,15 +32,4 @@ public class ClientHomeController {
         primary.setScene(new Scene(root, 370, 300));
         primary.show();
     }
-
-    @FXML
-    public void handlePastApplications(ActionEvent event) throws Exception{
-        Stage primary=(Stage)pastbutton.getScene().getWindow();
-        Parent root = FXMLLoader.load(App.class.getResource("PastApplications.fxml"));
-        primary.setTitle("Past Applications");
-        primary.setScene(new Scene(root, 370, 300));
-        primary.show();
-    }
 }
-
-

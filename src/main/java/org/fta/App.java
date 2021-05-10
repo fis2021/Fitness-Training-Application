@@ -20,7 +20,7 @@ public class App extends Application {
     public void start(Stage stage) throws IOException {
         initDirectory();
         ClientService.initDatabase();
-        Parent root = FXMLLoader.load(App.class.getResource("Register.fxml"));
+        Parent root = FXMLLoader.load(App.class.getResource("Login.fxml"));
         stage.setTitle("FTA");
         stage.setScene(new Scene(root, 400, 300));
         stage.show();
