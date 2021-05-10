@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="515.0" prefWidth="850.0" styleClass="root" stylesheets="@../../Style/TrainerHome.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.fta.Controllers.TrainerHomeController">
+   <children>
+      <VBox prefHeight="515.0" prefWidth="200.0" styleClass="menu" stylesheets="@../../Style/TrainerHome.css">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Trainer Home" wrappingWidth="181.38232421875">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Text>
+            <Button fx:id="myProfileButton" mnemonicParsing="false" onAction="#handleMyProfileAction" prefHeight="80.0" prefWidth="182.0" styleClass="button" stylesheets="@../../Style/TrainerHome.css" text="My Profile">
+               </Button>
+            <Button fx:id="zoomApplicantsButton" mnemonicParsing="false" onAction="#handleZoomApplicantsAction" prefHeight="100.0" prefWidth="178.0" text="Zoom Applicants">
+               </Button>
+            <Button fx:id="logoutButton" mnemonicParsing="false" onAction="#handleLogOutAction" prefHeight="101.0" prefWidth="184.0" text="Log out">
+             </Button>
+         </children></VBox>
+   </children>
+</AnchorPane>

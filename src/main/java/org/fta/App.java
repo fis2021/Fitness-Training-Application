@@ -7,6 +7,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import org.fta.Services.ClientService;
 import org.fta.Services.FileSystemService;
+import org.fta.Services.FitnessProgramService;
 
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -20,7 +21,8 @@ public class App extends Application {
     public void start(Stage stage) throws IOException {
         initDirectory();
         ClientService.initDatabase();
-        Parent root = FXMLLoader.load(App.class.getResource("Login.fxml"));
+        FitnessProgramService.initDatabase();
+        Parent root = FXMLLoader.load(App.class.getResource("Register.fxml"));
         stage.setTitle("FTA");
         stage.setScene(new Scene(root, 400, 300));
         stage.show();
