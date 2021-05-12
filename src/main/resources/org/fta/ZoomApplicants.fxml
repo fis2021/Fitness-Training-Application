@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="847.0" styleClass="root" stylesheets="@../../Style/TrainerZoomApplicants.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.fta.Controllers.ZoomApplicantsController">
+   <children>
+      <VBox prefHeight="512.0" prefWidth="200.0" styleClass="menu" stylesheets="@../../Style/TrainerZoomApplicants.css">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Zoom Applicants" wrappingWidth="173.38232421875">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Text>
+            <Button fx:id="myProfileButton" mnemonicParsing="false" onAction="#handleMyProfileAction" prefHeight="80.0" prefWidth="178.0" styleClass="button" stylesheets="@../../Style/TrainerMyProfile.css" text="My Profile">
+            </Button>
+            <Button fx:id="zoomApplicantsButton" mnemonicParsing="false" onAction="#handleZoomApplicantsAction" prefHeight="100.0" prefWidth="178.0" stylesheets="@../../Style/TrainerMyProfile.css" text="Zoom Applicants">
+            </Button>
+            <Button fx:id="logoutButton" mnemonicParsing="false" onAction="#handleLogOutAction" prefHeight="100.0" prefWidth="179.0" stylesheets="@../../Style/TrainerMyProfile.css" text="Log out">
+            </Button>
+         </children></VBox>
+      <TableView layoutX="200.0" layoutY="154.0" prefHeight="358.0" prefWidth="648.0">
+        <columns>
+          <TableColumn fx:id="exerciseNameColumn" prefWidth="200.0" text="Exercise Name" />
+          <TableColumn fx:id="costumerNameColumn" prefWidth="200.0" text="Customer Name" />
+            <TableColumn fx:id="trainingLevelColumn" prefWidth="250.0" text="Training Level" />
+        </columns>
+      </TableView>
+      <AnchorPane layoutX="199.0" prefHeight="155.0" prefWidth="648.0" />
+   </children>
+</AnchorPane>

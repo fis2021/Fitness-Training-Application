@@ -1,0 +1,19 @@
+.root{
+    -fx-background-color: #c6bacd;
+}
+
+.menu{
+    -fx-background-color: #8a7d92;
+}
+.button{
+    -fx-background-color: #8a7d92;
+    -fx-text-fill: #FFFFFF;
+    -fx-background-radius: 4;
+    -fx-font-size: 20.0;
+}
+.buttonad{
+    -fx-background-color: #c6bacd;
+    -fx-text-fill: #FFFFFF;
+    -fx-background-radius: 4;
+    -fx-font-size: 20.0;
+}
