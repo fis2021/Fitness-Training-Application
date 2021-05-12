@@ -121,4 +121,21 @@ public class ListofTrainersController implements Initializable{
             e.printStackTrace();
         }
     }
+
+    @FXML
+    void handleChooseAction(ActionEvent event) throws Exception {
+        try {
+            int qu=0;
+            qu=Integer.parseInt(selectedQuantity.getText());
+            FitnessProgramService.VerifyStock(SelectedShirtLabel.getText(), qu);
+            ShirtCartService.addShirtToCart(SelectedShirtLabel.getText(),SelectedPriceLabel.getText(),selectedQuantity.getText());
+            FitnessProgramService.removeQuantity(SelectedShirtLabel.getText(),qu);
+            addtocartmessage.setText("Chosen succesfully");
+
+        }catch(NotEnoughStockException e)
+        {
+            addtocartmessage.setText(e.getMessage());
+        }
+    }
+
 }
