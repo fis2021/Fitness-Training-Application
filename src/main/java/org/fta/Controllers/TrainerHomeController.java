@@ -31,7 +31,7 @@ public class TrainerHomeController {
         Stage stage=(Stage)zoomApplicantsButton.getScene().getWindow();
         Parent root = FXMLLoader.load(App.class.getResource("ZoomApplicants.fxml"));
         stage.setTitle("Zoom Applicants");
-        stage.setScene(new Scene(root, 512, 847));
+        stage.setScene(new Scene(root, 847, 512));
         stage.show();
     }
 

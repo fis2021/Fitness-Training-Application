@@ -1,45 +1,47 @@
 package org.fta.Models;
 import org.dizitart.no2.objects.Id;
 
+import java.util.Objects;
+
 public class ClientModel {
 
     @Id
     private String username;
     private String password;
-    private String Role;
+    private String role;
 
-    public ClientModel(String username, String password, String Role){
-        this.Role = Role;
-        this.password = password;
+    public ClientModel(String username, String password, String role) {
         this.username = username;
+        this.password = password;
+        this.role = role;
     }
 
     public ClientModel(){
 
     }
 
-    public String getRole() {
-        return Role;
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getPassword() {
         return password;
     }
 
-    public String getUsername() {
-        return username;
-    }
-
-    public void setRole(String role) {
-        Role = role;
-    }
-
     public void setPassword(String password) {
         this.password = password;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
     }
 
     @Override
@@ -49,14 +51,14 @@ public class ClientModel {
         ClientModel that = (ClientModel) o;
         if (username != null ? !username.equals(that.username) : that.username != null) return false;
         if (password != null ? !password.equals(that.password) : that.password != null) return false;
-        return Role != null ? Role.equals(that.Role) : that.Role == null;
+        return role != null ? role.equals(that.role) : that.role == null;
     }
 
     @Override
     public int hashCode() {
         int result = username != null ? username.hashCode() : 0;
         result = 31 * result + (password != null ? password.hashCode() : 0);
-        result = 31 * result + (Role != null ? Role.hashCode() : 0);
+        result = 31 * result + (role != null ? role.hashCode() : 0);
         return result;
     }
 }

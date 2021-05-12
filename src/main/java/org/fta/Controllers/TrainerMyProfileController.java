@@ -94,7 +94,7 @@ public class TrainerMyProfileController implements Initializable {
         Stage stage=(Stage)myProfileButton.getScene().getWindow();
         Parent root = FXMLLoader.load(App.class.getResource("TrainerMyProfile.fxml"));
         stage.setTitle("Trainer Profile");
-        stage.setScene(new Scene(root, 512, 847));
+        stage.setScene(new Scene(root, 847, 512));
         stage.show();
     }
 
@@ -102,7 +102,7 @@ public class TrainerMyProfileController implements Initializable {
         Stage stage=(Stage)zoomApplicantsButton.getScene().getWindow();
         Parent root = FXMLLoader.load(App.class.getResource("ZoomApplicants.fxml"));
         stage.setTitle("Zoom Applicants");
-        stage.setScene(new Scene(root, 350, 300));
+        stage.setScene(new Scene(root, 847, 512));
         stage.show();
     }
 
