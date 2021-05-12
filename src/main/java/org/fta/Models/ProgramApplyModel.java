@@ -16,6 +16,10 @@ public class ProgramApplyModel {
         this.exerciseName = exerciseName;
     }
 
+    public ProgramApplyModel(){
+
+    }
+
     public String getCustomerName() {
         return customerName;
     }
@@ -38,6 +42,15 @@ public class ProgramApplyModel {
 
     public void setExerciseName(String exerciseName) {
         this.exerciseName = exerciseName;
+    }
+
+    @Override
+    public String toString() {
+        return "Program{" +
+                "customerName='" + customerName + '\'' +
+                ", customerTrainingLevel='" + customerTrainingLevel + '\'' +
+                ", exerciseName='" + exerciseName + '\'' +
+                '}';
     }
 
     @Override
