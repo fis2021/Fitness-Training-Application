@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="515.0" prefWidth="850.0" styleClass="root" stylesheets="@../../Style/ClientHome.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.fta.Controllers.ClientHomeController">
+   <children>
+      <VBox prefHeight="515.0" prefWidth="242.0" styleClass="menu" stylesheets="@../../Style/ClientHome.css">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="    Client Home" wrappingWidth="225.38232421875">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Text>
+            <Button fx:id="listbutton" mnemonicParsing="false" onAction="#handleListofTrainersRedirect" prefHeight="80.0" prefWidth="238.0" styleClass="button" stylesheets="@../../Style/ClientHome.css" text="List of Trainers">
+            </Button>
+            <Button fx:id="pastbutton" mnemonicParsing="false" onAction="#handlePastApplications" prefHeight="100.0" prefWidth="231.0" stylesheets="@../../Style/ClientHome.css" text="Past Applications">
+            </Button>
+            <Button fx:id="logoutbutton" mnemonicParsing="false" onAction="#handleLogoutAction" prefHeight="102.0" prefWidth="248.0" stylesheets="@../../Style/ClientHome.css" text="Logout">
+            </Button>
+         </children></VBox>
+   </children>
+</AnchorPane>
