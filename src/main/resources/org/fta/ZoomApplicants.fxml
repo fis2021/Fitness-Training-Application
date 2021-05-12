@@ -20,10 +20,10 @@
             <Button fx:id="logoutButton" mnemonicParsing="false" onAction="#handleLogOutAction" prefHeight="100.0" prefWidth="179.0" stylesheets="@../../Style/TrainerMyProfile.css" text="Log out">
             </Button>
          </children></VBox>
-      <TableView layoutX="200.0" layoutY="154.0" prefHeight="358.0" prefWidth="648.0">
+      <TableView fx:id="applicantsTable" layoutX="200.0" layoutY="154.0" prefHeight="358.0" prefWidth="648.0">
         <columns>
           <TableColumn fx:id="exerciseNameColumn" prefWidth="200.0" text="Exercise Name" />
-          <TableColumn fx:id="costumerNameColumn" prefWidth="200.0" text="Customer Name" />
+          <TableColumn fx:id="clientNameColumn" prefWidth="200.0" text="Customer Name" />
             <TableColumn fx:id="trainingLevelColumn" prefWidth="250.0" text="Training Level" />
         </columns>
       </TableView>
