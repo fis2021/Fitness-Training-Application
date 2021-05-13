@@ -2,53 +2,42 @@ package org.fta.Models;
 
 public class ChooseModel {
 
-    private String team;
-    private int price;
-    private int quantity;
+    private String trainer;
+    private String exercise;
 
-    public CartShirt(String team, int price, int quantity) {
-        this.team = team;
-        this.price = price;
-        this.quantity = quantity;
+    public ChooseModel(String trainer, String exercise) {
+        this.trainer = trainer;
+        this.exercise = exercise;
     }
 
-    public CartShirt() {
+    public ChooseModel() {
 
     }
 
-    public String getTeam() {
-        return team;
+    public String gettrainer() {
+        return trainer;
     }
 
-    public void setTeam(String team) {
-        this.team = team;
+    public void settrainer(String trainer) {
+        this.trainer = trainer;
     }
 
-    public int getPrice() {
-        return price;
+    public String getexercise() {
+        return exercise;
     }
 
-    public void setPrice(int price) {
-        this.price = price;
+    public void setexercise(String exercise) {
+        this.exercise = exercise;
     }
 
-    public int getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
-
-    @Override
-    public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result + price;
-        result = prime * result + quantity;
-        result = prime * result + ((team == null) ? 0 : team.hashCode());
-        return result;
-    }
+//    @Override
+//    public int hashCode() {
+//        final int prime = 31;
+//        int result = 1;
+//        result = prime * result + exercise;
+//        result = prime * result + ((trainer == null) ? 0 : trainer.hashCode());
+//        return result;
+//    }
 
     @Override
     public boolean equals(Object obj) {
@@ -58,22 +47,20 @@ public class ChooseModel {
             return false;
         if (getClass() != obj.getClass())
             return false;
-        CartShirt other = (CartShirt) obj;
-        if (price != other.price)
+        ChooseModel other = (ChooseModel) obj;
+        if (exercise != other.exercise)
             return false;
-        if (quantity != other.quantity)
-            return false;
-        if (team == null) {
-            if (other.team != null)
+        if (trainer == null) {
+            if (other.trainer != null)
                 return false;
-        } else if (!team.equals(other.team))
+        } else if (!trainer.equals(other.trainer))
             return false;
         return true;
     }
 
     @Override
     public String toString() {
-        return "CartShirt [team=" + team + ", price=" + price + ", quantity=" + quantity + "]";
+        return "CartShirt [trainer=" + trainer + ", exercise=" + exercise + "]";
     }
 
 }
