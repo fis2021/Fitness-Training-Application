@@ -1,6 +1,7 @@
 package org.fta.Controllers;
 
 import org.fta.App;
+import org.fta.Services.ChooseService;
 import org.fta.Services.FitnessProgramService;
 import org.fta.Models.ProgramListener;
 import org.fta.Models.FitnessProgramModel;
@@ -27,8 +28,7 @@ import javafx.scene.layout.Region;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-
-
+import org.fta.Services.ProgramApplyService;
 
 
 public class ListofTrainersController implements Initializable{
@@ -64,6 +64,12 @@ public class ListofTrainersController implements Initializable{
     private Button pastbutton;
 
     private int k;
+
+    @FXML
+    private TextField enteredName;
+
+    @FXML
+    private TextField enteredTrainingLevel;
 
     @FXML
     public void handlePastApplications(ActionEvent event) throws Exception{
@@ -123,19 +129,17 @@ public class ListofTrainersController implements Initializable{
     }
 
     @FXML
-    void handleChooseAction(ActionEvent event) throws Exception {
-        try {
-            int qu=0;
-            qu=Integer.parseInt(selectedQuantity.getText());
-            FitnessProgramService.VerifyStock(SelectedShirtLabel.getText(), qu);
-            ShirtCartService.addShirtToCart(SelectedShirtLabel.getText(),SelectedPriceLabel.getText(),selectedQuantity.getText());
-            FitnessProgramService.removeQuantity(SelectedShirtLabel.getText(),qu);
-            addtocartmessage.setText("Chosen succesfully");
+    private Text applymessage;
 
-        }catch(NotEnoughStockException e)
-        {
-            addtocartmessage.setText(e.getMessage());
-        }
+    @FXML
+    void handleApplyAction(ActionEvent event) {
+        ProgramApplyService.addApplicationToDatabase(enteredName.getText(),enteredTrainingLevel.getText(),selectedProgramExerciseName.getText());
+        ChooseService.removeChosen();
+        applymessage.setText("Applied succesfully!");
     }
 
+    @FXML
+    void handleChooseAction(ActionEvent event) {
+        ChooseService.addChosenProgram(selectedProgramTrainerName.getText(), selectedProgramExerciseName.getText());
+    }
 }
