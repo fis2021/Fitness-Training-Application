@@ -72,7 +72,22 @@ public class ZoomApplicantsController implements Initializable {
         customerNameColumn.setCellValueFactory(new PropertyValueFactory<ProgramApplyModel, String>("customerName"));
         exerciseNameColumn.setCellValueFactory(new PropertyValueFactory<ProgramApplyModel, String>("exerciseName"));
         customerTrainingLevelColumn.setCellValueFactory(new PropertyValueFactory<ProgramApplyModel, String>("customerTrainingLevel"));
-        count = FitnessProgramService.getProgramNumber();
+        count = ProgramApplyService.getProgramApplyNumber();
+        for(int i=1; i<=count; i++){
+            ProgramApplyModel programApply = new ProgramApplyModel();
+            programApply = ProgramApplyService.returnProgramApply(i);
+            list.add(programApply);
+        }
+        applicantsTable.setItems(list);
+    }
+
+    @FXML
+    public void handleRefreshAction(ActionEvent event) {
+        applicantsTable.getItems().clear();
+        customerNameColumn.setCellValueFactory(new PropertyValueFactory<ProgramApplyModel, String>("customerName"));
+        exerciseNameColumn.setCellValueFactory(new PropertyValueFactory<ProgramApplyModel, String>("exerciseName"));
+        customerTrainingLevelColumn.setCellValueFactory(new PropertyValueFactory<ProgramApplyModel, String>("customerTrainingLevel"));
+        count = ProgramApplyService.getProgramApplyNumber();
         for(int i=1; i<=count; i++){
             ProgramApplyModel programApply = new ProgramApplyModel();
             programApply = ProgramApplyService.returnProgramApply(i);
@@ -82,39 +97,3 @@ public class ZoomApplicantsController implements Initializable {
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

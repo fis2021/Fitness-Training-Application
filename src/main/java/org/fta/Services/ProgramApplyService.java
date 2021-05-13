@@ -26,6 +26,7 @@ public class ProgramApplyService {
 
     private static int k=0;
     public static ProgramApplyModel returnProgramApply(int i){
+        k = 0;
         for(ProgramApplyModel programApply : programApplyRepository.find()){
             k++;
             if(k==i){
@@ -36,6 +37,7 @@ public class ProgramApplyService {
     }
 
     public static int getProgramApplyNumber(){
+        count = 0;
         for(ProgramApplyModel programApply : programApplyRepository.find()){
             count++;
         }

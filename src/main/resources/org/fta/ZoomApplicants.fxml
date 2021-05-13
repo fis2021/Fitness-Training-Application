@@ -21,12 +21,15 @@
             </Button>
          </children></VBox>
       <TableView fx:id="applicantsTable" layoutX="200.0" layoutY="154.0" prefHeight="358.0" prefWidth="648.0">
-        <columns>
-          <TableColumn fx:id="exerciseNameColumn" prefWidth="200.0" text="Exercise Name" />
-          <TableColumn fx:id="customerNameColumn" prefWidth="200.0" text="Customer Name" />
+         <columns>
+            <TableColumn fx:id="exerciseNameColumn" prefWidth="200.0" text="Exercise Name" />
+            <TableColumn fx:id="customerNameColumn" prefWidth="200.0" text="Customer Name" />
             <TableColumn fx:id="customerTrainingLevelColumn" prefWidth="250.0" text="Training Level" />
-        </columns>
+         </columns>
       </TableView>
-      <AnchorPane layoutX="199.0" prefHeight="155.0" prefWidth="648.0" />
+      <AnchorPane layoutX="199.0" prefHeight="155.0" prefWidth="648.0">
+         <children>
+            <Button fx:id="refreshButton" layoutX="546.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleRefreshAction" styleClass="buttonda" stylesheets="@../../Style/TrainerZoomApplicants.css" text="Refresh" />
+         </children></AnchorPane>
    </children>
 </AnchorPane>
