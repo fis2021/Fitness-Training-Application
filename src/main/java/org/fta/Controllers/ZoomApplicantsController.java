@@ -34,11 +34,11 @@ public class ZoomApplicantsController implements Initializable {
     @FXML
     private TableView<ProgramApplyModel> applicantsTable;
     @FXML
-    private TableColumn<ProgramApplyModel, String> clientNameColumn;
+    private TableColumn<ProgramApplyModel, String> customerNameColumn;
     @FXML
     private TableColumn<ProgramApplyModel, String> exerciseNameColumn;
     @FXML
-    private TableColumn<ProgramApplyModel, String> trainingLevelColumn;
+    private TableColumn<ProgramApplyModel, String> customerTrainingLevelColumn;
     private int count;
     ObservableList<ProgramApplyModel> list = FXCollections.observableArrayList();
 
@@ -69,9 +69,9 @@ public class ZoomApplicantsController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        clientNameColumn.setCellValueFactory(new PropertyValueFactory<ProgramApplyModel, String>("clientName"));
+        customerNameColumn.setCellValueFactory(new PropertyValueFactory<ProgramApplyModel, String>("customerName"));
         exerciseNameColumn.setCellValueFactory(new PropertyValueFactory<ProgramApplyModel, String>("exerciseName"));
-        trainingLevelColumn.setCellValueFactory(new PropertyValueFactory<ProgramApplyModel, String>("trainingLevel"));
+        customerTrainingLevelColumn.setCellValueFactory(new PropertyValueFactory<ProgramApplyModel, String>("customerTrainingLevel"));
         count = FitnessProgramService.getProgramNumber();
         for(int i=1; i<=count; i++){
             ProgramApplyModel programApply = new ProgramApplyModel();

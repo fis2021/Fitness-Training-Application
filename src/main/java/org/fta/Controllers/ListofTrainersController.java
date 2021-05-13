@@ -132,14 +132,14 @@ public class ListofTrainersController implements Initializable{
     private Text applymessage;
 
     @FXML
-    void handleApplyAction(ActionEvent event) {
+    public void handleApplyAction(ActionEvent event) {
         ProgramApplyService.addApplicationToDatabase(enteredName.getText(),enteredTrainingLevel.getText(),selectedProgramExerciseName.getText());
         ChooseService.removeChosen();
         applymessage.setText("Applied succesfully!");
     }
 
     @FXML
-    void handleChooseAction(ActionEvent event) {
+    public void handleChooseAction(ActionEvent event) {
         ChooseService.addChosenProgram(selectedProgramTrainerName.getText(), selectedProgramExerciseName.getText());
     }
 }

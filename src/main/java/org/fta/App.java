@@ -5,10 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import org.fta.Services.ClientService;
-import org.fta.Services.FileSystemService;
-import org.fta.Services.FitnessProgramService;
-import org.fta.Services.ProgramApplyService;
+import org.fta.Services.*;
 import org.fta.Services.ChooseService;
 
 import java.nio.file.Files;

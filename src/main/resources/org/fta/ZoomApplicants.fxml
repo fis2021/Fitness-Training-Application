@@ -23,8 +23,8 @@
       <TableView fx:id="applicantsTable" layoutX="200.0" layoutY="154.0" prefHeight="358.0" prefWidth="648.0">
         <columns>
           <TableColumn fx:id="exerciseNameColumn" prefWidth="200.0" text="Exercise Name" />
-          <TableColumn fx:id="clientNameColumn" prefWidth="200.0" text="Customer Name" />
-            <TableColumn fx:id="trainingLevelColumn" prefWidth="250.0" text="Training Level" />
+          <TableColumn fx:id="customerNameColumn" prefWidth="200.0" text="Customer Name" />
+            <TableColumn fx:id="customerTrainingLevelColumn" prefWidth="250.0" text="Training Level" />
         </columns>
       </TableView>
       <AnchorPane layoutX="199.0" prefHeight="155.0" prefWidth="648.0" />
