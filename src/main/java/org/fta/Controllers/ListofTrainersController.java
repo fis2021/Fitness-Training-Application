@@ -1,6 +1,7 @@
 package org.fta.Controllers;
 
 import org.fta.App;
+import org.fta.Services.ChooseService;
 import org.fta.Services.FitnessProgramService;
 import org.fta.Models.ProgramListener;
 import org.fta.Models.FitnessProgramModel;
@@ -27,8 +28,7 @@ import javafx.scene.layout.Region;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-
-
+import org.fta.Services.ProgramApplyService;
 
 
 public class ListofTrainersController implements Initializable{
@@ -64,6 +64,12 @@ public class ListofTrainersController implements Initializable{
     private Button pastbutton;
 
     private int k;
+
+    @FXML
+    private TextField enteredName;
+
+    @FXML
+    private TextField enteredTrainingLevel;
 
     @FXML
     public void handlePastApplications(ActionEvent event) throws Exception{
@@ -120,5 +126,20 @@ public class ListofTrainersController implements Initializable{
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    @FXML
+    private Text applymessage;
+
+    @FXML
+    void handleApplyAction(ActionEvent event) {
+        ProgramApplyService.addApplicationToDatabase(enteredName.getText(),enteredTrainingLevel.getText(),selectedProgramExerciseName.getText());
+        ChooseService.removeChosen();
+        applymessage.setText("Applied succesfully!");
+    }
+
+    @FXML
+    void handleChooseAction(ActionEvent event) {
+        ChooseService.addChosenProgram(selectedProgramTrainerName.getText(), selectedProgramExerciseName.getText());
     }
 }
