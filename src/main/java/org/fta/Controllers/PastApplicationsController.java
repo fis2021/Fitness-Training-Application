@@ -7,7 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
-package org.fta.Controllers;
+
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -17,6 +17,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import org.fta.App;
 import org.fta.Models.PastApplicationsModel;
+import org.fta.Services.PastApplicationsService;
 
 import java.net.URL;
 import java.util.ResourceBundle;
