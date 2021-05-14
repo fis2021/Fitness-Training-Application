@@ -12,12 +12,16 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import org.fta.App;
 import org.fta.Models.ProgramApplyModel;
 import org.fta.Models.FitnessProgramModel;
 import org.fta.Services.FitnessProgramService;
+import org.fta.Services.PastApplicationsService;
 import org.fta.Services.ProgramApplyService;
 
 import java.net.URL;
@@ -32,6 +36,20 @@ public class ZoomApplicantsController implements Initializable {
     @FXML
     private Button zoomApplicantsButton;
     @FXML
+    private Button refreshButton;
+    @FXML
+    private Button acceptButton;
+    @FXML
+    private Button denyButton;
+    @FXML
+    private TextField customerNameField;
+    @FXML
+    private TextField exerciseNameField;
+    @FXML
+    private TextField zoomLinkField;
+    @FXML
+    private Text applicationMessage;
+    @FXML
     private TableView<ProgramApplyModel> applicantsTable;
     @FXML
     private TableColumn<ProgramApplyModel, String> customerNameColumn;
@@ -43,7 +61,7 @@ public class ZoomApplicantsController implements Initializable {
     ObservableList<ProgramApplyModel> list = FXCollections.observableArrayList();
 
 
-    public void handleMyProfileAction (ActionEvent event) throws Exception{
+    public void handleMyProfileAction (ActionEvent event) throws Exception {
         Stage stage = (Stage)myProfileButton.getScene().getWindow();
         Parent root = FXMLLoader.load(App.class.getResource("TrainerMyProfile.fxml"));
         stage.setTitle("Trainer Profile");
@@ -51,7 +69,7 @@ public class ZoomApplicantsController implements Initializable {
         stage.show();
     }
 
-    public void handleZoomApplicantsAction (ActionEvent event) throws Exception{
+    public void handleZoomApplicantsAction (ActionEvent event) throws Exception {
         Stage stage = (Stage)zoomApplicantsButton.getScene().getWindow();
         Parent root = FXMLLoader.load(App.class.getResource("ZoomApplicants.fxml"));
         stage.setTitle("Zoom Applicants");
@@ -82,6 +100,20 @@ public class ZoomApplicantsController implements Initializable {
     }
 
     @FXML
+    public void handleAcceptAction(ActionEvent event) {
+        PastApplicationsService.addPastApplicationToDatabase(customerNameField.getText(), exerciseNameField.getText(), zoomLinkField.getText());
+        ProgramApplyService.acceptApplication(customerNameField.getText(),exerciseNameField.getText());
+        applicationMessage.setText("Application accepted");
+
+    }
+
+    @FXML
+    public void handleDenyAction(ActionEvent event) {
+        ProgramApplyService.denyApplication(customerNameField.getText(), exerciseNameField.getText());
+        applicationMessage.setText("Application denied");
+    }
+
+    @FXML
     public void handleRefreshAction(ActionEvent event) {
         applicantsTable.getItems().clear();
         customerNameColumn.setCellValueFactory(new PropertyValueFactory<ProgramApplyModel, String>("customerName"));
@@ -94,6 +126,16 @@ public class ZoomApplicantsController implements Initializable {
             list.add(programApply);
         }
         applicantsTable.setItems(list);
+    }
+
+    @FXML
+    public void clickApplication(MouseEvent event){
+        if(event.getClickCount() == 1){
+            int idx = 0;
+            idx = applicantsTable.getSelectionModel().getSelectedIndex();
+            customerNameField.setText(customerNameColumn.getCellData(idx));
+            exerciseNameField.setText(exerciseNameColumn.getCellData(idx));
+        }
     }
 
 }
