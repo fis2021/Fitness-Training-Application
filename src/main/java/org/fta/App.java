@@ -23,6 +23,7 @@ public class App extends Application {
         FitnessProgramService.initDatabase();
         ProgramApplyService.initDatabase();
         ChooseService.initDatabase();
+        PastApplicationsService.initDatabase();
         Parent root = FXMLLoader.load(App.class.getResource("Register.fxml"));
         stage.setTitle("FTA");
         stage.setScene(new Scene(root, 400, 300));

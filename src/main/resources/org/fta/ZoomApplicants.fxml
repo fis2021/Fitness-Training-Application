@@ -20,7 +20,7 @@
             <Button fx:id="logoutButton" mnemonicParsing="false" onAction="#handleLogOutAction" prefHeight="100.0" prefWidth="179.0" stylesheets="@../../Style/TrainerMyProfile.css" text="Log out">
             </Button>
          </children></VBox>
-      <TableView fx:id="applicantsTable" layoutX="200.0" layoutY="154.0" prefHeight="358.0" prefWidth="648.0">
+      <TableView fx:id="applicantsTable" layoutX="200.0" layoutY="154.0" onMouseClicked="#clickApplication" prefHeight="358.0" prefWidth="648.0">
          <columns>
             <TableColumn fx:id="exerciseNameColumn" prefWidth="200.0" text="Exercise Name" />
             <TableColumn fx:id="customerNameColumn" prefWidth="200.0" text="Customer Name" />
@@ -29,7 +29,16 @@
       </TableView>
       <AnchorPane layoutX="199.0" prefHeight="155.0" prefWidth="648.0">
          <children>
-            <Button fx:id="refreshButton" layoutX="546.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleRefreshAction" styleClass="buttonda" stylesheets="@../../Style/TrainerZoomApplicants.css" text="Refresh" />
+            <Button fx:id="refreshButton" layoutX="540.0" layoutY="68.0" mnemonicParsing="false" onAction="#handleRefreshAction" styleClass="buttonda" stylesheets="@../../Style/TrainerZoomApplicants.css" text="Refresh" />
+            <Button fx:id="acceptButton" layoutX="434.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleAcceptAction" styleClass="buttonda" stylesheets="@../../Style/TrainerZoomApplicants.css" text="Accept" />
+            <Button fx:id="denyButton" layoutX="550.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleDenyAction" styleClass="buttonda" stylesheets="@../../Style/TrainerZoomApplicants.css" text="Deny" />
+            <TextField fx:id="customerNameField" layoutY="24.0" prefHeight="25.0" prefWidth="179.0" promptText="Customer Name" />
+            <TextField fx:id="exerciseNameField" layoutY="78.0" prefHeight="25.0" prefWidth="178.0" promptText="Exercise Name" />
+            <Text fx:id="applicationMessage" layoutX="434.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="89.0">
+               <font>
+                  <Font size="16.0" />
+               </font></Text>
+            <TextField fx:id="zoomLinkField" layoutX="197.0" layoutY="54.0" prefHeight="25.0" prefWidth="178.0" promptText="Zoom Link" />
          </children></AnchorPane>
    </children>
 </AnchorPane>
