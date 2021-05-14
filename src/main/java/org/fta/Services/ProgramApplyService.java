@@ -44,4 +44,18 @@ public class ProgramApplyService {
         return count;
     }
 
+    public static void acceptApplication(String customerName, String exerciseName){
+        for(ProgramApplyModel programApply : programApplyRepository.find()){
+            if(Objects.equals(customerName, programApply.getCustomerName()) && Objects.equals(exerciseName, programApply.getExerciseName()))
+                programApplyRepository.remove(programApply);
+        }
+    }
+
+    public static void denyApplication(String customerName, String exerciseName){
+        for(ProgramApplyModel programApply : programApplyRepository.find()){
+            if(Objects.equals(customerName, programApply.getCustomerName()) && Objects.equals(exerciseName, programApply.getExerciseName()))
+                programApplyRepository.remove(programApply);
+        }
+    }
+
 }
