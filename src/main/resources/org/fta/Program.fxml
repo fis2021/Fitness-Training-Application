@@ -4,23 +4,23 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMousePressed="#click" prefHeight="240.0" prefWidth="388.0"  xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.fta.Controllers.ProgramController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMousePressed="#click" prefHeight="122.0" prefWidth="388.0" stylesheets="@../../Style/ClientHome.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.fta.Controllers.ProgramController">
     <children>
-        <VBox alignment="TOP_CENTER" layoutX="7.0" prefHeight="179.0" prefWidth="271.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <VBox alignment="TOP_CENTER" layoutX="7.0" prefHeight="121.0" prefWidth="381.0" AnchorPane.bottomAnchor="37.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
-                <HBox alignment="TOP_CENTER" prefHeight="61.0" prefWidth="297.0">
+                <HBox alignment="TOP_CENTER" prefHeight="99.0" prefWidth="382.0">
                     <children>
-                        <Label fx:id="exerciseNameLabel" prefHeight="42.0" prefWidth="135.0" wrapText="true" />
-                        <Label fx:id="trainerNameLabel" prefHeight="42.0" prefWidth="113.0" />
-                        <Label fx:id="repsLabel" prefHeight="45.0" prefWidth="18.0" />
-                        <Label fx:id="setsLabel" prefHeight="42.0" prefWidth="31.0" />
+                        <Label fx:id="exerciseNameLabel" prefHeight="58.0" prefWidth="120.0" wrapText="true" />
+                        <Label fx:id="trainerNameLabel" prefHeight="58.0" prefWidth="110.0" />
+                        <Label fx:id="repsLabel" prefHeight="58.0" prefWidth="54.0" />
+                        <Label fx:id="setsLabel" prefHeight="62.0" prefWidth="47.0" />
                     </children>
                 </HBox>
             </children>
         </VBox>
     </children>
     <styleClass>
-        <String fx:value="shirt-item" />
-        <String fx:value="cadrare" />
+        <String fx:value="menu" />
+        <String fx:value="menu" />
     </styleClass>
 </AnchorPane>
