@@ -10,15 +10,18 @@ import static org.fta.Services.FileSystemService.getPathToFile;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.List;
 import java.util.Objects;
 
 public class ClientService {
 
     private static ObjectRepository<ClientModel> clientRepository;
+    private static Nitrite database;
 
     public static void initDatabase() {
 
-        Nitrite database = Nitrite.builder()
+        FileSystemService.initDirectory();
+        database = Nitrite.builder()
                 .filePath(getPathToFile("fis-fta.db").toFile())
                 .openOrCreate("test", "test");
 
@@ -43,7 +46,7 @@ public class ClientService {
     }
 
     private static void CheckUserCredentialsInLogin(String username, String password) throws InvalidCredentialsException {
-        int k = 0; //contor
+        int k = 0;
         for (ClientModel client : clientRepository.find()) {
             if (Objects.equals(username, client.getUsername())) {
                 if (Objects.equals(client.getPassword(), encodePassword(username, password))) {
@@ -56,7 +59,7 @@ public class ClientService {
         }
     }
 
-    private static String encodePassword(String salt, String password) {
+    public static String encodePassword(String salt, String password) {
         MessageDigest md = getMessageDigest();
         md.update(salt.getBytes(StandardCharsets.UTF_8));
 
@@ -75,6 +78,12 @@ public class ClientService {
             throw new IllegalStateException("SHA-512 does not exist!");
         }
         return md;
+    }
+
+    public static Nitrite getDatabase() { return database; }
+
+    public static List<ClientModel> getAllUsers() {
+        return clientRepository.find().toList();
     }
 
 }

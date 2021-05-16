@@ -13,14 +13,14 @@
                         <Font size="29.0" />
                     </font>
                 </Text>
-                <Button fx:id="myProfileButton" mnemonicParsing="false" onAction="#handleMyProfileAction" prefHeight="80.0" prefWidth="178.0" styleClass="button" stylesheets="@../../Style/TrainerMyProfile.css" text="My Profile">
+                <Button id="myProfileButton"  fx:id="myProfileButton" mnemonicParsing="false" onAction="#handleMyProfileAction" prefHeight="80.0" prefWidth="178.0" styleClass="button" stylesheets="@../../Style/TrainerMyProfile.css" text="My Profile">
                 </Button>
-                <Button fx:id="zoomApplicantsButton" mnemonicParsing="false" onAction="#handleZoomApplicantsAction" prefHeight="100.0" prefWidth="178.0" stylesheets="@../../Style/TrainerMyProfile.css" text="Zoom Applicants">
+                <Button id="zoomApplicantsButton" fx:id="zoomApplicantsButton" mnemonicParsing="false" onAction="#handleZoomApplicantsAction" prefHeight="100.0" prefWidth="178.0" stylesheets="@../../Style/TrainerMyProfile.css" text="Zoom Applicants">
                 </Button>
-                <Button fx:id="logoutButton" mnemonicParsing="false" onAction="#handleLogOutAction" prefHeight="100.0" prefWidth="179.0" stylesheets="@../../Style/TrainerMyProfile.css" text="Log out">
+                <Button id="logoutButton" fx:id="logoutButton" mnemonicParsing="false" onAction="#handleLogOutAction" prefHeight="100.0" prefWidth="179.0" stylesheets="@../../Style/TrainerMyProfile.css" text="Log out">
                 </Button>
             </children></VBox>
-      <TableView fx:id="trainerTable" layoutX="200.0" layoutY="154.0" onMouseClicked="#clickProgram" prefHeight="358.0" prefWidth="648.0">
+      <TableView id="trainerTable" fx:id="trainerTable" layoutX="200.0" layoutY="154.0" onMouseClicked="#clickProgram" prefHeight="358.0" prefWidth="648.0">
         <columns>
             <TableColumn fx:id="exerciseNameColumn" prefWidth="156.0" text="Exercise Name" />
             <TableColumn fx:id="repsColumn" prefWidth="75.0" text="No. of reps" />
@@ -31,16 +31,16 @@
       </TableView>
       <AnchorPane layoutX="200.0" prefHeight="155.0" prefWidth="648.0">
          <children>
-            <TextField fx:id="exerciseNameField" layoutY="10.0" prefHeight="30.0" prefWidth="186.0" promptText="Exercise Name" />
-            <Button fx:id="addButton" layoutX="470.0" layoutY="15.0" mnemonicParsing="false" onAction="#handleAddAction" styleClass="buttonaed" stylesheets="@../../Style/TrainerMyProfile.css" text="Add" />
-            <Button fx:id="editButton" layoutX="470.0" layoutY="57.0" mnemonicParsing="false" onAction="#handleEditAction" prefHeight="44.0" prefWidth="65.0" styleClass="buttonaed" stylesheets="@../../Style/TrainerMyProfile.css" text="Edit" />
-            <Button fx:id="deleteButton" layoutX="470.0" layoutY="94.0" mnemonicParsing="false" onAction="#handleDeleteAction" prefHeight="44.0" prefWidth="88.0" styleClass="buttonaed" stylesheets="@../../Style/TrainerMyProfile.css" text="Delete" />
-            <Text fx:id="successMessage" layoutX="213.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="232.0" />
-            <Button fx:id="refreshButton" layoutX="550.0" layoutY="57.0" mnemonicParsing="false" onAction="#handleRefreshAction" prefHeight="44.0" prefWidth="94.0" styleClass="buttonaed" stylesheets="@../../Style/TrainerMyProfile.css" text="Refresh" />
-            <TextField fx:id="repsField" layoutY="45.0" prefHeight="30.0" prefWidth="186.0" promptText="No. of reps" />
-            <TextField fx:id="setsField" layoutY="80.0" prefHeight="30.0" prefWidth="186.0" promptText="No. of sets" />
-            <TextField fx:id="zoomField" layoutY="115.0" prefHeight="25.0" prefWidth="186.0" promptText="Zoom Link" />
-            <TextField fx:id="trainerNameField" layoutX="213.0" layoutY="65.0" prefHeight="25.0" prefWidth="226.0" promptText="Trainer Name" />
+            <TextField id="exerciseNameField" fx:id="exerciseNameField" layoutY="10.0" prefHeight="30.0" prefWidth="186.0" promptText="Exercise Name" />
+            <Button id="addButton" fx:id="addButton" layoutX="470.0" layoutY="15.0" mnemonicParsing="false" onAction="#handleAddAction" styleClass="buttonaed" stylesheets="@../../Style/TrainerMyProfile.css" text="Add" />
+            <Button id="editButton" fx:id="editButton" layoutX="470.0" layoutY="57.0" mnemonicParsing="false" onAction="#handleEditAction" prefHeight="44.0" prefWidth="65.0" styleClass="buttonaed" stylesheets="@../../Style/TrainerMyProfile.css" text="Edit" />
+            <Button id="deleteButton" fx:id="deleteButton" layoutX="470.0" layoutY="94.0" mnemonicParsing="false" onAction="#handleDeleteAction" prefHeight="44.0" prefWidth="88.0" styleClass="buttonaed" stylesheets="@../../Style/TrainerMyProfile.css" text="Delete" />
+            <Text id="successMessage" fx:id="successMessage" layoutX="213.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="232.0" />
+            <Button id="refreshButton" fx:id="refreshButton" layoutX="550.0" layoutY="57.0" mnemonicParsing="false" onAction="#handleRefreshAction" prefHeight="44.0" prefWidth="94.0" styleClass="buttonaed" stylesheets="@../../Style/TrainerMyProfile.css" text="Refresh" />
+            <TextField id="repsField" fx:id="repsField" layoutY="45.0" prefHeight="30.0" prefWidth="186.0" promptText="No. of reps" />
+            <TextField id="setsField" fx:id="setsField" layoutY="80.0" prefHeight="30.0" prefWidth="186.0" promptText="No. of sets" />
+            <TextField id="zoomField" fx:id="zoomField" layoutY="115.0" prefHeight="25.0" prefWidth="186.0" promptText="Zoom Link" />
+            <TextField id="trainerNameField" fx:id="trainerNameField" layoutX="213.0" layoutY="65.0" prefHeight="25.0" prefWidth="226.0" promptText="Trainer Name" />
          </children>
       </AnchorPane>
     </children>

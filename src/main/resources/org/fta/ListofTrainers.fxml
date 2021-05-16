@@ -28,17 +28,17 @@
                      <font>
                         <Font size="18.0" />
                      </font></Label>
-                  <Button mnemonicParsing="false" onAction="#handleChooseAction" prefHeight="55.0" prefWidth="144.0" styleClass="buttonm" stylesheets="@../../Style/ListofTrainers.css" text="Choose" />
+                  <Button id="chooseButton" mnemonicParsing="false" onAction="#handleChooseAction" prefHeight="55.0" prefWidth="144.0" styleClass="buttonm" stylesheets="@../../Style/ListofTrainers.css" text="Choose" />
                </children></VBox>
             <HBox layoutX="234.0" prefHeight="168.0" prefWidth="436.0" styleClass="root" stylesheets="@../../Style/ListofTrainers.css">
                <children>
                   <VBox prefHeight="147.0" prefWidth="146.0" stylesheets="@../../Style/ListofTrainers.css">
                      <children>
-                        <TextField fx:id="enteredName" prefHeight="43.0" prefWidth="144.0" promptText="Name" stylesheets="@../../Style/ListofTrainers.css" />
-                        <TextField fx:id="enteredTrainingLevel" prefHeight="48.0" prefWidth="144.0" promptText="Experience" stylesheets="@../../Style/ListofTrainers.css" />
+                        <TextField id="entername" fx:id="enteredName" prefHeight="43.0" prefWidth="144.0" promptText="Name" stylesheets="@../../Style/ListofTrainers.css" />
+                        <TextField id="enterlevel" fx:id="enteredTrainingLevel" prefHeight="48.0" prefWidth="144.0" promptText="Experience" stylesheets="@../../Style/ListofTrainers.css" />
                      </children></VBox>
-                  <Button mnemonicParsing="false" onAction="#handleApplyAction" prefHeight="44.0" prefWidth="140.0" styleClass="buttonm" stylesheets="@../../Style/ListofTrainers.css" text="Apply" />
-                  <Text fx:id="applymessage" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="154.38234603405">
+                  <Button id="applyButton" mnemonicParsing="false" onAction="#handleApplyAction" prefHeight="44.0" prefWidth="140.0" styleClass="buttonm" stylesheets="@../../Style/ListofTrainers.css" text="Apply" />
+                  <Text id="appliedmessage" fx:id="applymessage" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="154.38234603405">
                      <font>
                         <Font size="29.0" />
                      </font>
@@ -56,7 +56,7 @@
             </Button>
             <Button fx:id="pastbutton" mnemonicParsing="false" onAction="#handlePastApplications" prefHeight="100.0" prefWidth="231.0" stylesheets="@../../Style/ListofTrainers.css" text="Past Applications">
             </Button>
-            <Button fx:id="logoutbutton" mnemonicParsing="false" onAction="#handleLogoutAction" prefHeight="102.0" prefWidth="248.0" stylesheets="@../../Style/ListofTrainers.css" text="Logout">
+            <Button fx:id="logoutbutton" mnemonicParsing="false" onAction="#handleLogoutAction" id="logoutfromClientButton" prefHeight="102.0" prefWidth="248.0" stylesheets="@../../Style/ListofTrainers.css" text="Logout">
             </Button>
             <Button mnemonicParsing="false" />
          </children></VBox>
@@ -64,7 +64,7 @@
          <children>
             <ScrollPane fx:id="scroll" prefHeight="385.0" prefWidth="670.0">
                <content>
-                  <GridPane fx:id="grid" prefHeight="4.0" prefWidth="50.0">
+                  <GridPane id="selectPlan" fx:id="grid" prefHeight="4.0" prefWidth="50.0">
                      <columnConstraints>
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                      </columnConstraints>

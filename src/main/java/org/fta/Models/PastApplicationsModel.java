@@ -77,4 +77,5 @@ public class PastApplicationsModel {
         result = prime * result + ((exerciseName == null) ? 0 : exerciseName.hashCode());
         return result;
     }
+
 }

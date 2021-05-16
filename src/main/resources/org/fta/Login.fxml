@@ -16,20 +16,20 @@
 
     <Label stylesheets="@../../Style/Login.css" text="Username:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
 
-    <TextField fx:id="usernameField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+    <TextField id="username" fx:id="usernameField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
 
     <Label stylesheets="@../../Style/Login.css" text="Password:" textAlignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="2" />
 
-    <PasswordField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+    <PasswordField id="password" fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
 
     <Label prefHeight="18.0" prefWidth="66.0" stylesheets="@../../Style/Login.css" text="Role:" textAlignment="JUSTIFY" GridPane.columnIndex="0" GridPane.rowIndex="3" />
     <Text fx:id="loginMessage" GridPane.columnIndex="1" GridPane.rowIndex="7" />
 
-    <ChoiceBox fx:id="Role" prefWidth="150.0" styleClass="role" GridPane.columnIndex="1" GridPane.rowIndex="3">
+    <ChoiceBox id="role" fx:id="Role" prefWidth="150.0" styleClass="role" GridPane.columnIndex="1" GridPane.rowIndex="3">
     </ChoiceBox>
     <HBox alignment="bottom_right" spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="5">
-        <Button onAction="#handleLoginPageAction" prefHeight="26.0" prefWidth="65.0" stylesheets="@../../Style/Login.css" text="Login" />
-       <Button mnemonicParsing="false" onAction="#handleRegisterRedirectAction" prefHeight="26.0" prefWidth="131.0" stylesheets="@../../Style/Login.css" text="New? Register here" />
+        <Button id="loginButton" onAction="#handleLoginPageAction" prefHeight="26.0" prefWidth="65.0" stylesheets="@../../Style/Login.css" text="Login" />
+       <Button id="redirectToRegisterButton" mnemonicParsing="false" onAction="#handleRegisterRedirectAction" prefHeight="26.0" prefWidth="131.0" stylesheets="@../../Style/Login.css" text="New? Register here" />
     </HBox>
     <HBox prefHeight="26.0" prefWidth="167.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
     <columnConstraints>

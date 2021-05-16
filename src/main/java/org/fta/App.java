@@ -18,7 +18,6 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        initDirectory();
         ClientService.initDatabase();
         FitnessProgramService.initDatabase();
         ProgramApplyService.initDatabase();
@@ -28,12 +27,6 @@ public class App extends Application {
         stage.setTitle("FTA");
         stage.setScene(new Scene(root, 400, 300));
         stage.show();
-    }
-
-    private void initDirectory() {
-        Path applicationHomePath = FileSystemService.APPLICATION_HOME_PATH;
-        if (!Files.exists(applicationHomePath))
-            applicationHomePath.toFile().mkdirs();
     }
 
     public static void main(String[] args) {
