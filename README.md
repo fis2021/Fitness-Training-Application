@@ -39,6 +39,6 @@ The user needs to register into the application using one of the 2 roles:
 * Trainer
 * Client
 ## Trainer
-A Trainer can edit fitness programs from their profile, view a list of Clients that applied to their zoom meeting and accept or deny them.
+A Trainer can modify fitness programs from their profile, view a list of Clients that applied to their zoom meeting and accept or deny them.
 ## Client
-After logging in, a client can view the programs offered by the trainers and apply to their zoom meeting.
+After logging in, a client can view the programs offered by the trainers, apply to their zoom meeting, and see list of past applications.
