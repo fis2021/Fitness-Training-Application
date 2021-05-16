@@ -14,14 +14,16 @@ import static org.fta.Services.FileSystemService.getPathToFile;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.List;
 import java.util.Objects;
 
 public class FitnessProgramService {
 
     private static ObjectRepository<FitnessProgramModel> programRepository;
-    private static Nitrite database;
     private static int countProgram;
     private static int j=0;
+
+    private static Nitrite database;
 
     public static void initDatabase() {
         FileSystemService.initDirectory();
@@ -29,7 +31,7 @@ public class FitnessProgramService {
                 .filePath(getPathToFile("programs-fta.db").toFile())
                 .openOrCreate("test", "test");
 
-        programRepository = database.getRepository(FitnessProgramModel.class);
+         programRepository = database.getRepository(FitnessProgramModel.class);
     }
 
     public static void addProgram(String exerciseName, String reps, String sets, String zoomLink, String trainerName) {
@@ -106,5 +108,9 @@ public class FitnessProgramService {
     }
 
     public static Nitrite getDatabase() { return database; }
+
+    public static List<FitnessProgramModel> getAllPrograms() {
+        return programRepository.find().toList();
+    }
 
 }
