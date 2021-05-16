@@ -1,4 +1,5 @@
 package org.fta.Services;
+import java.util.List;
 import java.util.Objects;
 import org.dizitart.no2.Nitrite;
 import org.dizitart.no2.objects.ObjectFilter;
@@ -13,8 +14,10 @@ public class ProgramApplyService {
     private static int count = 0;
     private static ObjectRepository<ProgramApplyModel> programApplyRepository;
 
+    private static Nitrite database;
+
     public static void initDatabase(){
-        Nitrite database = Nitrite.builder()
+        database = Nitrite.builder()
                 .filePath(getPathToFile("applicants.db").toFile())
                 .openOrCreate("test", "test");
         programApplyRepository = database.getRepository(ProgramApplyModel.class);
@@ -57,5 +60,11 @@ public class ProgramApplyService {
                 programApplyRepository.remove(programApply);
         }
     }
+
+    public static List<ProgramApplyModel> getAllApplications() {
+        return programApplyRepository.find().toList();
+    }
+
+    public static Nitrite getDatabase() { return database; }
 
 }
