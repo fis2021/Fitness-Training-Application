@@ -4,15 +4,21 @@ import org.dizitart.no2.Nitrite;
 import org.dizitart.no2.objects.ObjectRepository;
 import org.fta.Models.PastApplicationsModel;
 
+
+import java.util.List;
+import java.util.Objects;
+
 import static org.fta.Services.FileSystemService.getPathToFile;
 
 public class PastApplicationsService {
 
     private static int count = 0;
     private static ObjectRepository<PastApplicationsModel> pastApplicationsRepository;
+    private static Nitrite database;
 
     public static void initDatabase(){
-        Nitrite database = Nitrite.builder()
+        FileSystemService.initDirectory();
+        database = Nitrite.builder()
                 .filePath(getPathToFile("pastApplications.db").toFile())
                 .openOrCreate("test", "test");
         pastApplicationsRepository = database.getRepository(PastApplicationsModel.class);
@@ -40,5 +46,14 @@ public class PastApplicationsService {
             count++;
         }
         return count;
+    }
+
+    public static Nitrite getDatabase()
+    {
+        return database;
+    }
+
+    public static List<PastApplicationsModel> getAllApplications() {
+        return pastApplicationsRepository.find().toList();
     }
 }
