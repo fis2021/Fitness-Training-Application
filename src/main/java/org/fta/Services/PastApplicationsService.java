@@ -4,6 +4,10 @@ import org.dizitart.no2.Nitrite;
 import org.dizitart.no2.objects.ObjectRepository;
 import org.fta.Models.PastApplicationsModel;
 
+
+import java.util.List;
+import java.util.Objects;
+
 import static org.fta.Services.FileSystemService.getPathToFile;
 
 public class PastApplicationsService {
@@ -40,5 +44,16 @@ public class PastApplicationsService {
             count++;
         }
         return count;
+    }
+
+    private static Nitrite database;
+
+    public static Nitrite getDatabase()
+    {
+        return database;
+    }
+
+    public static List<PastApplicationsModel> getAllApplications() {
+        return pastApplicationsRepository.find().toList();
     }
 }
