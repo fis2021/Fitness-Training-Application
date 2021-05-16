@@ -16,21 +16,21 @@
          </font></Text>
        <Label stylesheets="@../../Style/Register.css" text="Username:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
 
-       <TextField fx:id="usernameField" promptText="Username" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+       <TextField id="username" fx:id="usernameField" promptText="Username" GridPane.columnIndex="1" GridPane.rowIndex="1" />
 
        <Label stylesheets="@../../Style/Register.css" text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
 
-       <PasswordField fx:id="passwordField" promptText="Password" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+       <PasswordField id="password" fx:id="passwordField" promptText="Password" GridPane.columnIndex="1" GridPane.rowIndex="2" />
        <Label text="Role:" GridPane.rowIndex="5" />
-       <Text fx:id="registrationMessage" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+       <Text id="registrationMessage" fx:id="registrationMessage" GridPane.columnIndex="1" GridPane.rowIndex="7" />
 
        <HBox alignment="TOP_RIGHT" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="8">
            <children>
-               <Button mnemonicParsing="false" onAction="#handleLoginPageAction" prefHeight="25.0" prefWidth="75.0" stylesheets="@../../Style/Register.css" text="Login Page" />
-              <Button onAction="#handleSignUpAction" stylesheets="@../../Style/Register.css" text="Sign Up" />
+               <Button id="gotoLoginButton" mnemonicParsing="false" onAction="#handleLoginPageAction" prefHeight="25.0" prefWidth="75.0" stylesheets="@../../Style/Register.css" text="Login Page" />
+              <Button id="registerButton" onAction="#handleSignUpAction" stylesheets="@../../Style/Register.css" text="Sign Up" />
            </children>
        </HBox>
-      <ChoiceBox fx:id="Role" prefHeight="25.0" prefWidth="201.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+      <ChoiceBox id="role" fx:id="Role" prefHeight="25.0" prefWidth="201.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
 
     <columnConstraints>
         <ColumnConstraints />
