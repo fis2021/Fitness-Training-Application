@@ -2,6 +2,8 @@ package org.fta.Services;
 
 import static org.fta.Services.FileSystemService.getPathToFile;
 
+import java.util.List;
+
 import org.dizitart.no2.Nitrite;
 import org.dizitart.no2.objects.ObjectFilter;
 import org.dizitart.no2.objects.ObjectRepository;
@@ -14,8 +16,11 @@ public class ChooseService {
 
     private static ObjectRepository<ChooseModel> ChooseProgramRepository;
 
+    private static Nitrite database;
+
     public static void initDatabase() {
-        Nitrite database = Nitrite.builder()
+        FileSystemService.initDirectory();
+        database = Nitrite.builder()
                 .filePath(getPathToFile("chosen-programs.db").toFile())
                 .openOrCreate("test", "test");
 
@@ -30,5 +35,14 @@ public class ChooseService {
     public static void removeChosen()
     {
         ChooseProgramRepository.remove(ObjectFilters.ALL);
+    }
+
+    public static Nitrite getDatabase()
+    {
+        return database;
+    }
+
+    public static List<ChooseModel> getAllChosen() {
+        return ChooseProgramRepository.find().toList();
     }
 }
