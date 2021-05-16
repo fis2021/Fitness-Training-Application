@@ -116,12 +116,11 @@ class ChooseandApplyTest {
         robot.type(KeyCode.ENTER);
         robot.clickOn("#loginButton");
         robot.clickOn("#golist");
-
         robot.clickOn("#selectPlan");
         robot.clickOn("#chooseButton");
-        robot.clickOn("#enteredname");
+        robot.clickOn("#entername");
         robot.write("Paul Andronik");
-        robot.clickOn("#enteredlevel");
+        robot.clickOn("#enterlevel");
         robot.write("experimentat");
         robot.clickOn("#applyButton");
         assertThat(robot.lookup("#appliedmessage").queryText()).hasText("Applied succesfully!");

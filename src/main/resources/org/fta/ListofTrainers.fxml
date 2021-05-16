@@ -34,8 +34,8 @@
                <children>
                   <VBox prefHeight="147.0" prefWidth="146.0" stylesheets="@../../Style/ListofTrainers.css">
                      <children>
-                        <TextField id="enteredname" fx:id="enteredName" prefHeight="43.0" prefWidth="144.0" promptText="Name" stylesheets="@../../Style/ListofTrainers.css" />
-                        <TextField id="enteredlevel" fx:id="enteredTrainingLevel" prefHeight="48.0" prefWidth="144.0" promptText="Experience" stylesheets="@../../Style/ListofTrainers.css" />
+                        <TextField id="entername" fx:id="enteredName" prefHeight="43.0" prefWidth="144.0" promptText="Name" stylesheets="@../../Style/ListofTrainers.css" />
+                        <TextField id="enterlevel" fx:id="enteredTrainingLevel" prefHeight="48.0" prefWidth="144.0" promptText="Experience" stylesheets="@../../Style/ListofTrainers.css" />
                      </children></VBox>
                   <Button id="applyButton" mnemonicParsing="false" onAction="#handleApplyAction" prefHeight="44.0" prefWidth="140.0" styleClass="buttonm" stylesheets="@../../Style/ListofTrainers.css" text="Apply" />
                   <Text id="appliedmessage" fx:id="applymessage" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="154.38234603405">
