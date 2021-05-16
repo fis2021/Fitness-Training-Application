@@ -53,7 +53,7 @@ class ViewPlansAsClientTest {
     }
 
     @Test
-    void testViewShirts(FxRobot robot) throws UsernameAlreadyExistsException {
+    void testViewPlans(FxRobot robot) throws UsernameAlreadyExistsException {
         FitnessProgramService.addProgram("squat","1","10","6z0","Paula");
         FitnessProgramService.addProgram("abdomene","2","6","2z0","Cezar");
         FitnessProgramService.addProgram("genuflexiuni","3","5","4z0","Bogdan");
