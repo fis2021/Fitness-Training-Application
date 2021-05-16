@@ -13,7 +13,7 @@
                   <Font size="29.0" />
                </font>
             </Text>
-            <Button fx:id="listbutton" mnemonicParsing="false" onAction="#handleListofTrainersRedirect" prefHeight="80.0" prefWidth="238.0" styleClass="button" stylesheets="@../../Style/ClientHome.css" text="List of Trainers">
+            <Button id="golist" fx:id="listbutton" mnemonicParsing="false" onAction="#handleListofTrainersRedirect" prefHeight="80.0" prefWidth="238.0" styleClass="button" stylesheets="@../../Style/ClientHome.css" text="List of Trainers">
             </Button>
             <Button fx:id="pastbutton" mnemonicParsing="false" onAction="#handlePastApplications" prefHeight="100.0" prefWidth="231.0" stylesheets="@../../Style/ClientHome.css" text="Past Applications">
             </Button>

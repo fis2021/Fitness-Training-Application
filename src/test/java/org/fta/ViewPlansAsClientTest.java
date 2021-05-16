@@ -41,7 +41,7 @@ class ViewPlansAsClientTest {
         FileUtils.cleanDirectory(FileSystemService.getApplicationHomeFolder().toFile());
         ClientService.initDatabase();
         FitnessProgramService.initDatabase();
-        ClientService.addUser(USERNAMECLIENT, PASSWORD,"Customer");
+        ClientService.addUser(USERNAMECLIENT, PASSWORD,"Client");
     }
 
     @Start
@@ -67,5 +67,6 @@ class ViewPlansAsClientTest {
         robot.type(KeyCode.DOWN); //selects Client role
         robot.type(KeyCode.ENTER);
         robot.clickOn("#loginButton");
+        robot.clickOn("#golist");
     }
 }
