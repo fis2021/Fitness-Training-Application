@@ -76,7 +76,7 @@ public class ListofTrainersController implements Initializable{
         Stage primary=(Stage)pastbutton.getScene().getWindow();
         Parent root = FXMLLoader.load(App.class.getResource("PastApplications.fxml"));
         primary.setTitle("Past Applications");
-        primary.setScene(new Scene(root, 370, 300));
+        primary.setScene(new Scene(root, 800, 800));
         primary.show();
     }
 
