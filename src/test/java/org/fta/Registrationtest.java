@@ -78,7 +78,7 @@ class Registrationtest {
     }
 
     @Test
-    void testGoToLoginButton(FxRobot robot) {
+    void testGoToLoginPage(FxRobot robot) {
         robot.clickOn("#gotoLoginButton");
     }
 }

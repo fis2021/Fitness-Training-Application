@@ -56,8 +56,56 @@ class ViewApplicationsAsTrainerTest {
         primaryStage.setScene(new Scene(root, 850, 500));
         primaryStage.show();
     }
+    @Test
+    void testGoToLogoutButton(FxRobot robot) throws UsernameAlreadyExistsException {
+        ProgramApplyService.addApplicationToDatabase(CUSTOMERNAME, TRAININGLEVEL, "Lunges" );
+        ProgramApplyService.addApplicationToDatabase(CUSTOMERNAME+1, TRAININGLEVEL+1, "Crunches" );
+        robot.clickOn("#username");
+        robot.write(USERNAMETRAINER);
+        robot.clickOn("#password");
+        robot.write(PASSWORD);
+        robot.clickOn("#role");
+        robot.type(KeyCode.DOWN);
+        robot.type(KeyCode.ENTER);
+        robot.clickOn("#loginButton");
+        robot.clickOn("#zoomApplicantsButton");
+        robot.clickOn("#logoutButton");
+    }
 
     @Test
+    void testGoToMyProfile(FxRobot robot) throws UsernameAlreadyExistsException{
+        ProgramApplyService.addApplicationToDatabase(CUSTOMERNAME, TRAININGLEVEL, "Lunges" );
+        ProgramApplyService.addApplicationToDatabase(CUSTOMERNAME+1, TRAININGLEVEL+1, "Crunches" );
+        robot.clickOn("#username");
+        robot.write(USERNAMETRAINER);
+        robot.clickOn("#password");
+        robot.write(PASSWORD);
+        robot.clickOn("#role");
+        robot.type(KeyCode.DOWN);
+        robot.type(KeyCode.ENTER);
+        robot.clickOn("#loginButton");
+        robot.clickOn("#zoomApplicantsButton");
+        robot.clickOn("#myProfileButton");
+    }
+
+    @Test
+    void testGoToZoomApplicants(FxRobot robot) throws UsernameAlreadyExistsException{
+        ProgramApplyService.addApplicationToDatabase(CUSTOMERNAME, TRAININGLEVEL, "Lunges" );
+        ProgramApplyService.addApplicationToDatabase(CUSTOMERNAME+1, TRAININGLEVEL+1, "Crunches" );
+        robot.clickOn("#username");
+        robot.write(USERNAMETRAINER);
+        robot.clickOn("#password");
+        robot.write(PASSWORD);
+        robot.clickOn("#role");
+        robot.type(KeyCode.DOWN);
+        robot.type(KeyCode.ENTER);
+        robot.clickOn("#loginButton");
+        robot.clickOn("#zoomApplicantsButton");
+        robot.clickOn("#zoomApplicantsButton");
+    }
+
+
+        @Test
     void testViewOrders(FxRobot robot) throws UsernameAlreadyExistsException{
         ProgramApplyService.addApplicationToDatabase(CUSTOMERNAME, TRAININGLEVEL, "Lunges" );
         ProgramApplyService.addApplicationToDatabase(CUSTOMERNAME+1, TRAININGLEVEL+1, "Crunches" );
