@@ -17,7 +17,7 @@
                 </Button>
                 <Button fx:id="pastbutton" mnemonicParsing="false" prefHeight="100.0" prefWidth="231.0" stylesheets="@../../Style/PastApplications.css" text="Past Applications">
                 </Button>
-                <Button fx:id="logoutbutton" mnemonicParsing="false" onAction="#handleLogoutAction" prefHeight="102.0" prefWidth="248.0" stylesheets="@../../Style/PastApplications.css" text="Logout">
+                <Button id="logoutButton" fx:id="logoutbutton" mnemonicParsing="false" onAction="#handleLogoutAction" prefHeight="102.0" prefWidth="248.0" stylesheets="@../../Style/PastApplications.css" text="Logout">
                 </Button>
             </children></VBox>
         <TableView fx:id="applicationsTable" layoutX="242.0" layoutY="91.0" prefHeight="423.0" prefWidth="609.0">

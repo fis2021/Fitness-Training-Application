@@ -40,7 +40,7 @@ public class PastApplicationsController implements Initializable {
         Stage stage=(Stage)logoutbutton.getScene().getWindow();
         Parent root = FXMLLoader.load(App.class.getResource("Login.fxml"));
         stage.setTitle("Login");
-        stage.setScene(new Scene(root, 350, 300));
+        stage.setScene(new Scene(root, 800, 800));
         stage.show();
     }
 
@@ -52,7 +52,7 @@ public class PastApplicationsController implements Initializable {
         Stage primary=(Stage)listbutton.getScene().getWindow();
         Parent root = FXMLLoader.load(App.class.getResource("ListofTrainers.fxml"));
         primary.setTitle("List of Trainers");
-        primary.setScene(new Scene(root, 370, 300));
+        primary.setScene(new Scene(root, 870, 800));
         primary.show();
     }
 
