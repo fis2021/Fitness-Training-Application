@@ -15,7 +15,7 @@
             </Text>
             <Button fx:id="myProfileButton" mnemonicParsing="false" onAction="#handleMyProfileAction" prefHeight="80.0" prefWidth="182.0" styleClass="button" stylesheets="@../../Style/TrainerHome.css" text="My Profile">
                </Button>
-            <Button fx:id="zoomApplicantsButton" mnemonicParsing="false" onAction="#handleZoomApplicantsAction" prefHeight="100.0" prefWidth="178.0" text="Zoom Applicants">
+            <Button id="zoomApplicantsButton" fx:id="zoomApplicantsButton" mnemonicParsing="false" onAction="#handleZoomApplicantsAction" prefHeight="100.0" prefWidth="178.0" text="Zoom Applicants">
                </Button>
             <Button fx:id="logoutButton" mnemonicParsing="false" onAction="#handleLogOutAction" prefHeight="101.0" prefWidth="184.0" text="Log out">
              </Button>
