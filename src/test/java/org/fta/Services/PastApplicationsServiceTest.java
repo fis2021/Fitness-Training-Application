@@ -85,4 +85,5 @@ class PastApplicationsServiceTest {
         PastApplicationsService.addPastApplicationToDatabase(EXERCISE_NAME+2, CUSTOMER_NAME+2, ZOOM_LINK+2);
         assertThat(PastApplicationsService.getPastApplicationNumber()).isEqualTo(3);
     }
+
 }

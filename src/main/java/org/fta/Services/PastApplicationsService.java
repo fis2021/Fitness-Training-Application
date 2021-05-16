@@ -14,9 +14,11 @@ public class PastApplicationsService {
 
     private static int count = 0;
     private static ObjectRepository<PastApplicationsModel> pastApplicationsRepository;
+    private static Nitrite database;
 
     public static void initDatabase(){
-        Nitrite database = Nitrite.builder()
+        FileSystemService.initDirectory();
+        database = Nitrite.builder()
                 .filePath(getPathToFile("pastApplications.db").toFile())
                 .openOrCreate("test", "test");
         pastApplicationsRepository = database.getRepository(PastApplicationsModel.class);
@@ -45,8 +47,6 @@ public class PastApplicationsService {
         }
         return count;
     }
-
-    private static Nitrite database;
 
     public static Nitrite getDatabase()
     {

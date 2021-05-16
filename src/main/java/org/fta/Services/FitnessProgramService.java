@@ -19,12 +19,13 @@ import java.util.Objects;
 public class FitnessProgramService {
 
     private static ObjectRepository<FitnessProgramModel> programRepository;
+    private static Nitrite database;
     private static int countProgram;
     private static int j=0;
 
     public static void initDatabase() {
-
-        Nitrite database = Nitrite.builder()
+        FileSystemService.initDirectory();
+        database = Nitrite.builder()
                 .filePath(getPathToFile("programs-fta.db").toFile())
                 .openOrCreate("test", "test");
 
@@ -103,5 +104,7 @@ public class FitnessProgramService {
         }
         return null;
     }
+
+    public static Nitrite getDatabase() { return database; }
 
 }
