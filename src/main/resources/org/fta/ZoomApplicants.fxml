@@ -13,14 +13,14 @@
                   <Font size="29.0" />
                </font>
             </Text>
-            <Button fx:id="myProfileButton" mnemonicParsing="false" onAction="#handleMyProfileAction" prefHeight="80.0" prefWidth="178.0" styleClass="button" stylesheets="@../../Style/TrainerMyProfile.css" text="My Profile">
+            <Button id="myProfileButton" fx:id="myProfileButton" mnemonicParsing="false" onAction="#handleMyProfileAction" prefHeight="80.0" prefWidth="178.0" styleClass="button" stylesheets="@../../Style/TrainerMyProfile.css" text="My Profile">
             </Button>
-            <Button fx:id="zoomApplicantsButton" mnemonicParsing="false" onAction="#handleZoomApplicantsAction" prefHeight="100.0" prefWidth="178.0" stylesheets="@../../Style/TrainerMyProfile.css" text="Zoom Applicants">
+            <Button id="zoomApplicantsButton" fx:id="zoomApplicantsButton" mnemonicParsing="false" onAction="#handleZoomApplicantsAction" prefHeight="100.0" prefWidth="178.0" stylesheets="@../../Style/TrainerMyProfile.css" text="Zoom Applicants">
             </Button>
-            <Button fx:id="logoutButton" mnemonicParsing="false" onAction="#handleLogOutAction" prefHeight="100.0" prefWidth="179.0" stylesheets="@../../Style/TrainerMyProfile.css" text="Log out">
+            <Button id="logoutButton" fx:id="logoutButton" mnemonicParsing="false" onAction="#handleLogOutAction" prefHeight="100.0" prefWidth="179.0" stylesheets="@../../Style/TrainerMyProfile.css" text="Log out">
             </Button>
          </children></VBox>
-      <TableView fx:id="applicantsTable" layoutX="200.0" layoutY="154.0" onMouseClicked="#clickApplication" prefHeight="358.0" prefWidth="648.0">
+      <TableView id="applicantsTable" fx:id="applicantsTable" layoutX="200.0" layoutY="154.0" onMouseClicked="#clickApplication" prefHeight="358.0" prefWidth="648.0">
          <columns>
             <TableColumn fx:id="exerciseNameColumn" prefWidth="200.0" text="Exercise Name" />
             <TableColumn fx:id="customerNameColumn" prefWidth="200.0" text="Customer Name" />
@@ -29,16 +29,16 @@
       </TableView>
       <AnchorPane layoutX="199.0" prefHeight="155.0" prefWidth="648.0">
          <children>
-            <Button fx:id="refreshButton" layoutX="540.0" layoutY="68.0" mnemonicParsing="false" onAction="#handleRefreshAction" styleClass="buttonda" stylesheets="@../../Style/TrainerZoomApplicants.css" text="Refresh" />
-            <Button fx:id="acceptButton" layoutX="434.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleAcceptAction" styleClass="buttonda" stylesheets="@../../Style/TrainerZoomApplicants.css" text="Accept" />
-            <Button fx:id="denyButton" layoutX="550.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleDenyAction" styleClass="buttonda" stylesheets="@../../Style/TrainerZoomApplicants.css" text="Deny" />
-            <TextField fx:id="customerNameField" layoutY="24.0" prefHeight="25.0" prefWidth="179.0" promptText="Customer Name" />
-            <TextField fx:id="exerciseNameField" layoutY="78.0" prefHeight="25.0" prefWidth="178.0" promptText="Exercise Name" />
-            <Text fx:id="applicationMessage" layoutX="434.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="89.0">
+            <Button id="refreshButton" fx:id="refreshButton" layoutX="540.0" layoutY="68.0" mnemonicParsing="false" onAction="#handleRefreshAction" styleClass="buttonda" stylesheets="@../../Style/TrainerZoomApplicants.css" text="Refresh" />
+            <Button id="acceptButton" fx:id="acceptButton" layoutX="434.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleAcceptAction" styleClass="buttonda" stylesheets="@../../Style/TrainerZoomApplicants.css" text="Accept" />
+            <Button id="denyButton" fx:id="denyButton" layoutX="550.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleDenyAction" styleClass="buttonda" stylesheets="@../../Style/TrainerZoomApplicants.css" text="Deny" />
+            <TextField id="customerNameField" fx:id="customerNameField" layoutY="24.0" prefHeight="25.0" prefWidth="179.0" promptText="Customer Name" />
+            <TextField id="exerciseNameField" fx:id="exerciseNameField" layoutY="78.0" prefHeight="25.0" prefWidth="178.0" promptText="Exercise Name" />
+            <Text id="applicationMessage" fx:id="applicationMessage" layoutX="434.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="89.0">
                <font>
                   <Font size="16.0" />
                </font></Text>
-            <TextField fx:id="zoomLinkField" layoutX="197.0" layoutY="54.0" prefHeight="25.0" prefWidth="178.0" promptText="Zoom Link" />
+            <TextField id="zoomLinkField" fx:id="zoomLinkField" layoutX="197.0" layoutY="54.0" prefHeight="25.0" prefWidth="178.0" promptText="Zoom Link" />
          </children></AnchorPane>
    </children>
 </AnchorPane>
