@@ -24,8 +24,10 @@ import javafx.stage.Stage;
 @ExtendWith(ApplicationExtension.class)
 
 class ViewPlansAsClientTest {
+
     public static final String USERNAMECLIENT = "client";
     public static final String PASSWORD = "password";
+
     @AfterEach
     void tearDown() {
         FitnessProgramService.getDatabase().close();
@@ -34,7 +36,7 @@ class ViewPlansAsClientTest {
 
     @BeforeEach
     void setUp() throws Exception{
-        FileSystemService.APPLICATION_FOLDER=".test-shirt-application";
+        FileSystemService.APPLICATION_FOLDER = ".test-fta";
         FileSystemService.initDirectory();
         FileUtils.cleanDirectory(FileSystemService.getApplicationHomeFolder().toFile());
         ClientService.initDatabase();
