@@ -16,8 +16,11 @@ public class ChooseService {
 
     private static ObjectRepository<ChooseModel> ChooseProgramRepository;
 
+    private static Nitrite database;
+
     public static void initDatabase() {
-        Nitrite database = Nitrite.builder()
+        FileSystemService.initDirectory();
+        database = Nitrite.builder()
                 .filePath(getPathToFile("chosen-programs.db").toFile())
                 .openOrCreate("test", "test");
 
@@ -33,8 +36,6 @@ public class ChooseService {
     {
         ChooseProgramRepository.remove(ObjectFilters.ALL);
     }
-
-    private static Nitrite database;
 
     public static Nitrite getDatabase()
     {

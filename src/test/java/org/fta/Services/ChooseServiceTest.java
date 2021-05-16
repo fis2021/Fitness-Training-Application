@@ -40,6 +40,7 @@ class ChooseServiceTest {
         FileSystemService.initDirectory();
         FileUtils.cleanDirectory(FileSystemService.getApplicationHomeFolder().toFile());
         ChooseService.initDatabase();
+        System.out.println("Before each");
     }
 
     @Test
